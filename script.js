@@ -7,6 +7,7 @@ function openForm() {
 function displayStop() {
     document.getElementById("buttonId").style.display = "inline";
     document.getElementById("myForm").style.display = "none";
+    document.body.style.backgroundColor = "white";
 }
 
 function fetchDetails(first, last, contact) {
