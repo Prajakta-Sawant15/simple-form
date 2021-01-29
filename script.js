@@ -2,6 +2,7 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
     document.getElementById("buttonId").style.display = "none";
     document.body.style.backgroundColor = "rgba(0, 0, 0, 0.13)";
+    document.getElementById("formSumbitDisplay").style.display = "none";
 }
 
 function displayStop() {
