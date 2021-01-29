@@ -11,12 +11,17 @@ function displayStop() {
 }
 
 function fetchDetails(first, last, contact) {
+    document.body.style.backgroundColor = "white";
     document.getElementById("buttonId").style.display = "inline";
     document.getElementById("myForm").style.display = "none";
     document.getElementById("formSumbitDisplay").style.display = "block";
-    document.body.style.backgroundColor = "white";
     var element = document.getElementById("formSumbitDisplay");
-    var node = document.createTextNode("First Name: " + `${first}` + "\n Last Name: " + `${last}` + "\n and contact " + `${contact}`);
-    element.appendChild(node);
-    element.appendChild(element);
+    let arr1 = [];
+    arr1.push({val: "First Name: " + `${first}`},{val: "Last Name: " + `${last}`},{val: "Contact: " + `${contact}`})
+    arr1.forEach(value=> {
+        var node = document.createElement("LI");  
+        var textnode = document.createTextNode(value.val); 
+        node.appendChild(textnode); 
+        document.getElementById("formSumbitDisplay").appendChild(node);
+    })
 }
